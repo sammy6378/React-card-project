@@ -1,0 +1,73 @@
+.container {
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 3em 5em;
+margin: 2em 0;
+gap: 3em;
+}
+
+.profile{
+background: rgba(255, 255, 255, 0.1);
+color: #000;
+border-radius: 10px;
+flex-wrap: wrap;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+width: 100%;
+padding: .6em .6em;
+text-align: start;
+position: relative;
+transition: transform 0.3s ease-in-out;
+}
+
+.profile:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+img{
+  position: absolute;
+  top: -10px;
+  left: 49%;
+  transform: translate(-50%,-50%);
+  border: 2px solid aqua;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.profile p{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+h2{
+  color: #02c1c7;
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    .profile{
+      width: 100%;
+    }
+    .container{
+      padding: 3em 2em;
+      display: grid;
+      /* flex-wrap: wrap; */
+      grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:767px){
+  .container{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width:475px){
+  .container{
+    max-width: 100%;
+    padding: 2em;
+  }
+  .profile{
+    width: 100%;
+  }
+}
